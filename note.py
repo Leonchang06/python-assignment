@@ -505,7 +505,7 @@ class NoteFrame(BaseFrame):
         notes_to_show = notes if notes is not None else folders.get(current_folder, [])
         
         for i, note in enumerate(notes_to_show):
-            tags_text = f" [ {' ] [ '.join(note.get_tags())} ]" if note.get_tags() else ""
+            tags_text = f" [{'] ['.join(note.get_tags())}]" if note.get_tags() else ""
             display_text = f"{note.get_title()}{tags_text}"
             self.note_list.insert(tk.END, display_text)
 
